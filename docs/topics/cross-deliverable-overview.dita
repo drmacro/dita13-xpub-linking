@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_bj3_k2m_4j">
+ <title>Cross-Deliverable Addressing Processing Overview</title>
+ <conbody>
+  <p>Cross-deliverable addressing is enabled by using generated key definitions
+      that map keys referenced from the referencing root map (e.g., "Map A") to
+      locations <i>as delivered</i> for the referenced root map ("e.g., Map
+      B").</p>
+    <p>For cross-deliverable addressing there are two possible ways it could work:<ol
+      id="ol_nfw_gmp_4j">
+      <li>Extend the keyref syntax to allow for explicit addressing of root maps
+        to establish the key space the referenced key is defined in (1.3
+        proposal 13041). This project uses the proposed syntax
+        "[<varname>keyspaceID</varname>::]<varname>keyname</varname>[/<varname>elementId</varname>].
+        The <varname>keyspaceID</varname> is either a key bound to a peer root
+        map (e.g., via &lt;mapref>) or the name of a key scope defined in the
+        same map (scoped keys is a separate proposal being developed for DITA
+        1.3).</li>
+      <li>Define the meaning of scope="peer" on &lt;mapref> to mean that the
+        included map is a root map whose keys may be referenced from the
+        including map. In this case, all the keys must be unique across both the
+        including map and all included peer maps. This approach has been
+        determined by the DITA TC to be inconsistent with the
+        previously-established meaning of scope="peer" for references to maps,
+        namely that the entire map, not just its contents, is treated as a peer
+        and therefore the keys defined in peer maps do not directly contribute
+        to the key space of the referencing map.</li>
+      </ol></p>
+    <p>To create a cross-deliverable reference you use keys bound to locations
+      in the target deliverable. Of course, the original reference is not
+      authored in terms of a specific deliverable but in terms of the target
+      <i>as authored</i>. It is up to a processing system to translate a
+      source-to-source key reference/key definition pair into a
+      source-to-deliverable reference/definition pair. This processing can be
+      virtual, in the case of a single all-knowing processing system (e.g., a
+      CMS that manages a coordinated set of root maps and their publication), or
+      it be literal through the generation and interchange of intermediate key
+      sets among different processors. </p>
+    <p>The basic process is:<ol
+      id="ol_ndk_f4p_4j">
+      <li>Process each root map for a specific deliverable in order to determine
+        what the locations, <i>as delivered</i>, each defined key maps to. For
+        each key defined by the root map, generate a new key definition that
+        binds the same key to the location as delivered. This is "pass 1"</li>
+      <li>For a given root map, replace its inclusion of the the peer root maps
+        it points to with inclusion of the as-delivered key definitions for that
+        root map. More generally: for each key reference to a peer resource,
+        replace the key definition as authored with the corresponding
+        as-delivered key definition. This may involve manual manipulation of the
+        key definitions in the case where you want some references resolve to
+        different delivered forms of a give target root map (e.g., some to the
+        HTML and some to the PDF version of a target root map).</li>
+      <li>Process the root map again to produce the final deliverable. This is
+        "pass 2".</li>
+      </ol></p>
+    <p>The implementation challenge in this process is generating the
+      intermediate key definitions, which requires emitting new key definitions
+      at the time the delivered location is known, e.g., at the point when a
+      topic's HTML location or PDF anchor or whatever is known in the process of
+      generating the specific deliverable.</p>
+    <p>Once the new key definitions are generated, using them can be as simple
+      as changing the &lt;mapref> elements in the original root maps to point to
+      the generated key definition sets rather than to the original peer map and
+      reprocessing the map (or rather, processing a copy of the original root
+      map that reflects the change).</p>
+    <p>The implementation requirements are:<ul
+      id="ul_bgv_gsq_4j">
+      <li>Provide an indication of whether a processing run is pass 1 or pass
+        2.</li>
+      <li>Generate an intermediate version of the original root map that
+        includes the delivery-specific keydef sets in place of the original peer
+        root map references. This generated map will be the input to pass
+        2.<p>There must be a pause, or the option of a pause, before doing pass
+        2 so that there is the opportunity to adjust the set of
+        delivery-specific keydefs used, for example, to swap in HTML-specific
+        keydefs for PDF-specific keydefs or whatever.</p></li>
+      <li>Run pass 2 using the generated intermediate map to produce the final
+        output.</li>
+      </ul></p>
+    <p>Need to capture or generate all the details of a given processing run as
+      a Rendition Definition so that sets of generated keydefs can be reliably
+      correlated to their associated rendition (delivery).</p>
+ </conbody>
+</concept>

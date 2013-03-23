@@ -11,14 +11,18 @@
       <topicmeta>
         <navtitle>Keydefs Map A scope="peer"</navtitle>
       </topicmeta>
+      <mapref keys="map-a"
+        scope="peer"
+        href="../map-a/map-a.ditamap"
+      />
       <keydef
         keys="topic-a-01"
-        href="../map-a/topics/topic-a-01.dita"
-        scope="peer"/>
+        keyref="map-a:topic-a-01"
+      />
       <keydef
         keys="topic-a-02"
-        href="../map-a/topics/topic-a-02.dita"
-        scope="peer"/>
+        keyref="map-a:topic-a-02"
+      />
     </topicgroup>
   </topicgroup>
   <topicref

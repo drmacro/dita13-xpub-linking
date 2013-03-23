@@ -10,16 +10,19 @@
     <topicgroup>
       <topicmeta>
         <navtitle>Keydefs Map B scope="peer"</navtitle>
-      </topicmeta>
-
+      </topicmeta>  
+      <mapref keys="map-b"
+        scope="peer"
+        href="../map-b/map-b.ditamap"
+      />
       <keydef
         keys="topic-b-01"
-        href="../map-b/topics/topic-b-01.dita"
-        scope="peer"/>
+        keyref="map-b::topic-b-01"
+      />
       <keydef
         keys="topic-b-02"
-        href="../map-b/topics/topic-b-02.dita"
-        scope="peer"/>
+        keyref="map-b::topic-b02"
+      />
     </topicgroup>
   </topicgroup>
   <topicref

@@ -1,42 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_bj3_k2m_4j">
- <title>Cross-Deliverable Addressing Processing Overview</title>
+ <title>Processing Overview</title>
  <conbody>
-  <p>Cross-deliverable addressing is enabled by using generated key definitions
-      that map keys referenced from the referencing root map (e.g., "Map A") to
-      locations <i>as delivered</i> for the referenced root map ("e.g., Map
-      B").</p>
-    <p>For cross-deliverable addressing there are two possible ways it could work:<ol
-      id="ol_nfw_gmp_4j">
-      <li>Extend the keyref syntax to allow for explicit addressing of root maps
-        to establish the key space the referenced key is defined in (1.3
-        proposal 13041). This project uses the proposed syntax
-        "[<varname>keyspaceID</varname>::]<varname>keyname</varname>[/<varname>elementId</varname>].
-        The <varname>keyspaceID</varname> is either a key bound to a peer root
-        map (e.g., via &lt;mapref>) or the name of a key scope defined in the
-        same map (scoped keys is a separate proposal being developed for DITA
-        1.3).</li>
-      <li>Define the meaning of scope="peer" on &lt;mapref> to mean that the
-        included map is a root map whose keys may be referenced from the
-        including map. In this case, all the keys must be unique across both the
-        including map and all included peer maps. This approach has been
-        determined by the DITA TC to be inconsistent with the
-        previously-established meaning of scope="peer" for references to maps,
-        namely that the entire map, not just its contents, is treated as a peer
-        and therefore the keys defined in peer maps do not directly contribute
-        to the key space of the referencing map.</li>
-      </ol></p>
     <p>To create a cross-deliverable reference you use keys bound to locations
       in the target deliverable. Of course, the original reference is not
       authored in terms of a specific deliverable but in terms of the target
-      <i>as authored</i>. It is up to a processing system to translate a
-      source-to-source key reference/key definition pair into a
-      source-to-deliverable reference/definition pair. This processing can be
-      virtual, in the case of a single all-knowing processing system (e.g., a
-      CMS that manages a coordinated set of root maps and their publication), or
-      it be literal through the generation and interchange of intermediate key
-      sets among different processors. </p>
+      <i>as authored</i>. </p>
+    <p>Cross-deliverable addressing is enabled by using generated key
+      definitions that map keys referenced from the referencing root map (e.g.,
+      "Map A") to locations <i>as delivered</i> for the referenced root map
+      ("e.g., Map B").</p>
+    <p>It is up to a processing system to translate a source-to-source key
+      reference/key definition pair into a source-to-deliverable
+      reference/definition pair. This processing can be virtual, in the case of
+      a single all-knowing processing system (e.g., a CMS that manages a
+      coordinated set of root maps and their publication), or it can be literal
+      through the generation and interchange of intermediate key sets among
+      different processors. </p>
     <p>The basic process is:<ol
       id="ol_ndk_f4p_4j">
       <li>Process each root map for a specific deliverable in order to determine
@@ -81,5 +62,5 @@
     <p>Need to capture or generate all the details of a given processing run as
       a Rendition Definition so that sets of generated keydefs can be reliably
       correlated to their associated rendition (delivery).</p>
- </conbody>
+  </conbody>
 </concept>

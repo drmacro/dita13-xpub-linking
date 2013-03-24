@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_kyl_f5b_qj">
+ <title>Cross-Deliverable Addressing</title>
+ <shortdesc>Cross-deliverable addressing is the ability to unambiguously link to
+    (address) objects in separate deliverables such that when both the
+    referencing deliverable and the referenced deliverable are delivered for
+    access (e.g., through a Web browser or other interactive reading device or
+    system) that the reader may reliably navigate to the referenced location in
+    the target deliverable.</shortdesc>
+ <conbody>
+    <p>In the context of this discussion these requirements are specifically for
+      navigable links, meaning topic references to peer resources, cross
+      references, and other DITA-defined links that normally result in
+      reader-navigable links. It is not intended to be used for content
+      reference links, although DITA's concept of deferred reference resolution
+      could make cross-deliverable content reference meaningful in certain
+      processing contexts (for example, a system like Eclipse InfoCenters where
+      the final deliverable is actually constructed dynamically by the
+      InfoCenter tool based on the actual content deployed, rather than being
+      statically determined at InfoCenter generation time). This discussion
+      focuses only on the requirements of navigable links.</p>
+  <p>The overall requirements include:<ul
+      id="ul_rkt_z5b_qj">
+      <li>The ability to link to the target deliverable as a whole (e.g., for a
+        citation to a book or standalone Web site or area within a Web site that
+        serves as a starting point for information access).</li>
+      <li>The ability to link to a specific topic as delivered by the target
+        deliverable (e.g., an HTML page generated from a DITA topic or a
+        specific location within a PDF document).</li>
+      <li>The ability to link to a specific use of a specific topic as delivered
+        in the target deliverable. For example, if the same topic is referenced
+        in two places in a map, the ability to link unambiguously to the second
+        use and not the first.</li>
+      <li>The ability to link to a specific non-topic element within a topic as
+        delivered. For example, the ability to link to a specific figure or
+        table or procedure step in a separate deliverable.</li>
+      <li>The ability to determine, for each link instance, the specific
+        delivered instance to link to. For example, a book might be delivered as
+        both HTML and PDF. The author of references to the book must be able to
+        choose, for each link, whether to link to the HTML version or the PDF
+        version.<note>In the simple case, this decision is made globally for the
+        referencing deliverable, with the normal default being "like links to
+        like", meaning the links will be to the same form of deliverable as the
+        deliverable being generated, e.g., HTML to HTML, PDF to PDF, EPUB to
+        EPUB, etc. But the general mechanism must allow for per-link-instance
+        selection of the target deliverable.</note></li>
+      </ul></p>
+    <p>Because DITA through DITA 1.2 does not, directly, enable links from a
+      single anchor to multiple anchors, doing so for cross-deliverable
+      address.</p>
+    <p>There are two main aspects to cross-deliverable addressing:<ul
+      id="ul_ujh_mwb_qj">
+      <li>The addressing syntax used to author addresses</li>
+      <li>The processing required in order to correctly deliverable navigable
+        cross-deliverable links.</li>
+      </ul></p>
+    <p>One inherent challenge with cross-deliverable addressing is that the
+      details of addressing for deliverables is specific to the deliverables,
+      both to the data formats used (HTML, PDF, EPUB, etc.) and to the delivery
+      systems and access tools used (Web browsers, PDF readers, EPUB readers,
+      etc.). This means that the processing details will always be processor
+      specific. The most the DITA standard can do is define syntax and
+      addressing and linking semantics that are both consistent across most or
+      all delivery methods and consistent with and practical for interactive
+      delivery methods, meaning delivery methods that provide some sort of
+      navigation linking facility. The DITA standard cannot mandate
+      implementation details or even general implementation architecture.</p>
+    <p>However, because the DITA standard is largely driven by requirements for
+      interoperation and interchange of both content and processing, it can and
+      does define standard data formats for use by processors, such as the
+      DITAVAL format for specifying filtering and flagging rules.</p>
+    <p>For the purposes of cross-deliverable addressing the DITA specification
+      specifies the use of intermediate sets of key definitions as the
+      interchange format for deliverable-specific addresses used by processors.
+      This both keys the definition within the DITA vocabulary domain and allows
+      for widest possible interoperation among processors, as most, if not all,
+      DITA 1.2-aware processors support key-based addressing. Of course,
+      processors are not required to literally use intermediate key definitions
+      for their own internal purposes. But processors should support the use of
+      such key definitions for interchange among processors.</p>
+ </conbody>
+</concept>

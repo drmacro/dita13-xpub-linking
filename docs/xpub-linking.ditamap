@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap>
+  <booktitle>
+    <mainbooktitle>Cross-Deliverable Linking</mainbooktitle>
+  </booktitle>
+  <frontmatter>
+    <booklists>
+      <toc/>
+      <figurelist/>
+    </booklists>
+  </frontmatter>
+  <chapter
+    href="topics/cross-deliverable-addressing-chapter.dita">
+    <topicref
+      href="topics/cross-deliverable-addressing-syntax.dita"/>
+    <topicref
+      href="topics/cross-deliverable-overview.dita"/>
+  </chapter>
+</bookmap>

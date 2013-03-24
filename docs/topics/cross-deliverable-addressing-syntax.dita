@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_gng_k5b_qj">
+ <title>Addressing Syntax</title>
+ <shortdesc>In order to address across deliverables you must be able to
+    reference keys as defined in specific root maps or other uniquely-identified
+    key spaces.</shortdesc>
+ <conbody>
+    <p>There are two possible ways cross-deliverable addresssing could work:<ol
+      id="ol_nfw_gmp_4j">
+      <li>Extend the keyref syntax to allow for explicit addressing of root maps
+        to establish the key space the referenced key is defined in (1.3
+        proposal 13041). This project uses the proposed syntax
+        "[<varname>keyspaceID</varname>::]<varname>keyname</varname>[/<varname>elementId</varname>].
+        The <varname>keyspaceID</varname> is either a key bound to a peer root
+        map (e.g., via &lt;mapref>) or the name of a key scope defined in the
+        same map (scoped keys is a separate proposal being developed for DITA
+        1.3).</li>
+      <li>Define the meaning of scope="peer" on &lt;mapref> to mean that the
+        included map is a root map whose keys may be referenced from the
+        including map. In this case, all the keys must be unique across both the
+        including map and all included peer maps. <p>This approach has been
+        determined by the DITA TC to be inconsistent with the
+        previously-established meaning of scope="peer" for references to maps,
+        namely that the entire map, not just its contents, is treated as a peer
+        and therefore the keys defined in peer maps do not directly contribute
+        to the key space of the referencing map.</p></li>
+      </ol></p>
+    <p>Thus, in DITA 1.3 cross-deliverable addressing will use some new syntax
+      or set of attributes for use with key references in order to explicitly
+      address keys in different key spaces.</p>
+  </conbody>
+</concept>

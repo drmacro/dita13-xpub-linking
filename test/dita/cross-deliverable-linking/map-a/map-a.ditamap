@@ -25,7 +25,7 @@
       />
     </topicgroup>
   </topicgroup>
-  <topicref
+  <topicref keyscope="map-a"
     keyref="topic-a-root">
     <topicref
       keyref="topic-a-01"/>

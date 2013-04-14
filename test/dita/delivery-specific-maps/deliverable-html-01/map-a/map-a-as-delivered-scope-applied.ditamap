@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <title>Map A as delivered</title>
+  <topicgroup>
+    <topicmeta>
+      <navtitle>Keydefs Map A scope="local"</navtitle>
+    </topicmeta>
+    <keydef
+      keys="map-a.topic-a-root"
+      scope="external"
+      format="html"
+      href="file:/Users/ekimber/workspace_37/dita13-xpub-linking/test/dita/delivery-specific-maps/deliverable-html-01/map-a/html/topics/topic-a-root.html">
+      <topicmeta>
+        <navtitle>Map A</navtitle>
+      </topicmeta>
+    </keydef>
+    <keydef
+      keys="map-a.topic-a-01"
+      scope="external"
+      format="html"
+      href="file:/Users/ekimber/workspace_37/dita13-xpub-linking/test/dita/delivery-specific-maps/deliverable-html-01/map-a/html/map-a/topics/topic-a-01.html">
+      <topicmeta>
+        <navtitle>Topic A-01</navtitle>
+      </topicmeta>
+    </keydef>
+    <keydef
+      keys="map-a.topic-a-02"
+      scope="external"
+      format="html"
+      href="file:/Users/ekimber/workspace_37/dita13-xpub-linking/test/dita/delivery-specific-maps/deliverable-html-01/map-a/html/map-a/topics/topic-a-02.html">
+      <topicmeta>
+        <navtitle>Topic A-02</navtitle>
+      </topicmeta>
+    </keydef>
+  </topicgroup>
+</map>

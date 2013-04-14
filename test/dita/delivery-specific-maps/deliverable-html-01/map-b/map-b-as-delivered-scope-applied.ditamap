@@ -4,17 +4,29 @@
   <title>Map B keydefs as delivered for deliverable "HTML"</title>
   <keydef
     keys="map-b.topic-b-root"
-    scope="external"
     format="html"
-    href="html/topics/topic-b-root.html"/>
+    scope="external"
+    href="file:/Users/ekimber/workspace_37/dita13-xpub-linking/test/dita/delivery-specific-maps/deliverable-html-01/map-b/html/map-b/topics/topic-b-root.html">
+    <topicmeta>
+      <navtitle>Map B</navtitle>
+    </topicmeta>
+  </keydef>
   <keydef
     keys="map-b.topic-b-01"
-    scope="external"
     format="html"
-    href="html/topics/topic-b-01.html"/>
+    scope="external"
+    href="file:/Users/ekimber/workspace_37/dita13-xpub-linking/test/dita/delivery-specific-maps/deliverable-html-01/map-b/html/map-b/topics/topic-b-01.html">
+    <topicmeta>
+      <navtitle>Topic B-01</navtitle>
+    </topicmeta>
+  </keydef>
   <keydef
     keys="map-b.topic-b-02"
-    scope="external"
     format="html"
-    href="html/topics/topic-b-02.html"/>
+    scope="external"
+    href="file:/Users/ekimber/workspace_37/dita13-xpub-linking/test/dita/delivery-specific-maps/deliverable-html-01/map-b/html/map-b/topics/topic-b-02.html">
+    <topicmeta>
+      <navtitle>Topic B-02</navtitle>
+    </topicmeta>    
+  </keydef>
 </map>

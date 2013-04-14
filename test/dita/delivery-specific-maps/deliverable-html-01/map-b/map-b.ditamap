@@ -10,10 +10,9 @@
       processing-role="resource-only"
     />
   </topicgroup>
-  <mapref keyscope="map-a" 
-    href="../map-a/map-a.ditamap"
-    scope="peer"
-  />
+  <mapref href="../map-a/map-a-as-delivered-scope-applied.ditamap" 
+    scope="local"
+    keyscope="map-a"/>
   <topicref
     keyref="topic-b-root">
     <topicref

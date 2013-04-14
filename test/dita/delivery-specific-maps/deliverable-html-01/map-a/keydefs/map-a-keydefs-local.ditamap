@@ -10,9 +10,6 @@
       keys="topic-a-root"
       href="../topics/topic-a-root.dita"/>
     <keydef
-      keys="topic-a-peer-mapref-root"
-      href="../topics/topic-a-peer-mapref-root.dita"/>
-    <keydef
       keys="topic-a-01"
       href="../topics/topic-a-01.dita"/>
     <keydef

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <title>Map A as delivered</title>
+  <topicgroup>
+    <topicmeta>
+      <navtitle>Keydefs Map A scope="local"</navtitle>
+    </topicmeta>
+    <keydef
+      keys="topic-a-root"
+      scope="external"
+      format="html"
+      href="html/topics/topic-a-root.dita"/>
+    <keydef
+      keys="topic-a-peer-mapref-root"
+      scope="external"
+      format="html"
+      href="html/topics/topic-a-peer-mapref-root.dita"/>
+    <keydef
+      keys="topic-a-01"
+      scope="external"
+      format="html"
+      href="html/topics/topic-a-01.dita"/>
+    <keydef
+      keys="topic-a-02"
+      scope="external"
+      format="html"
+      href="html/topics/topic-a-02.dita"/>
+  </topicgroup>
+</map>

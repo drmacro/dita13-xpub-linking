@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_wx4_r1t_vj">
+  <title>Deliverable-Specific Maps</title>
+  <body>
+    <p>The maps in this area represent the result of replacing peer-scope
+      keydefs as authored with keydefs that point to specific versions <i>as
+      delivered</i> of the peer root maps.</p>
+    <p>Each deliverable reflects a unique <term>deliverable
+      specification</term>, which includes the root map, the processor used
+      (e.g., Open Toolkit), the deliverable type (HTML, PDF, EPUB, etc.), the
+      specific parameters provided to the processor, and the filtering and
+      flagging specification (DITAVAL).</p>
+    <p>In this example, maps A and B link to each other when processed
+      independently as root maps. When they are processed as part of omnibus map
+      ab-omnibus, they are part of the same deliverable.</p>
+    <p>Map C is not linked to and has no links to any peer deliverables, so it's
+      deliverable-specific map should be the same as it's as-authored map.</p>
+    <p>In the original map, all peer maps are referenced by a mapref with a
+      @scope of "peer".</p>
+    <p>In the deliveryable-specific map, all peer-scope map references are
+      replaced with references to local-scope maps that define the keys that
+      point to the corresponding topics <i>as delivered</i>.</p>
+    <p>For example, the key definition "map-b.topic-b-01" for map B becomes, in
+      the context of map A, rewritten to be a pointer to the HTML file generated
+      from topic topic-b-01.dita when map B was rendered to HTML. The keydef is
+      now a local (to map A) key definition that points to a an external
+      HTML-format resource, the HTML page to which topic-b-01.dita was
+      rendered.</p>
+    <p>Note that to make this change, you (or the processing system) have to
+      know which delivered instance of Map B you want Map A to point to when it
+      is delivered to a particular deliverable specification. Map B may be
+      delivered in many ways, but for a given link from a delivery of A to a a
+      topic in B, you must choose a specific deliverable for B. Normally the
+      deliverable for B would be specified when you process A initially, either
+      explicitly or implicitly through a business rule like "same format to same
+      format, same DITAVAL file, same processing options".</p>
+  </body>
+</topic>

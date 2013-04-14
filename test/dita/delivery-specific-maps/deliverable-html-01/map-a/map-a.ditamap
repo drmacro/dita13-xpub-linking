@@ -24,9 +24,17 @@
       -->
   <mapref href="keydefs/map-a-keydefs-local.ditamap" 
     processing-role="resource-only"/>
-  <!-- Include Map B's map as a peer and assign a keyscope to it. -->
-  <mapref href="../map-b/map-b.ditamap" 
-    scope="peer" 
+  <!-- Include map B's generated "as-delivered" map, which
+       simply redefines each keydef within Map B to reflect
+       the location of the associated resource as delivered
+       for this delivery.
+       
+       Note that the scope is now local, not peer.
+       
+       It is still defining the same key scope.
+     -->
+  <mapref href="../map-b/map-b-as-delivered-scope-applied.ditamap" 
+    scope="local"
     keyscope="map-b"/>
   <!-- Navigation tree for map A: -->
   <topicref 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_syd_dl5_vj">
+  <title>Deliverable HTML 01</title>
+  <body>
+    <p>This deliverable represents the maps that will be used to generate the
+      final HTML deliverable for Maps A and B.</p>
+    <p>Both maps include the other map as a peer in the maps as authored. For
+      the deliverable-specific maps, the peer map references are replaced with
+      local-scope map references to maps that contain new versions of the key
+      definitions from the included peer map, rewritten to reflect the locations
+      of those resources <i>as delivered</i>.</p>
+    <p>For example, the original key definition in Map B for topic
+      topic-b-01.dita
+      is:<codeblock>    &lt;keydef
+      keys="topic-b-01"
+      href="../topics/topic-b-01.dita"/></codeblock></p>
+    <p>The rewritten keydef looks like
+      this:<codeblock>    &lt;keydef
+      keys="topic-b-01"
+      href="../map-b/topics/topic-b-01.html"
+      scope="external"
+      format="html"
+    /></codeblock></p>
+    <p>Note that you can only know that the @href value should be once Map B has
+      been rendered for this delivery. In practice this means that each map must
+      be rendered twice: once to determine the output location of key defined
+      for that map and once to reflect the deliverable-specific key definitions
+      for each peer map.</p>
+  </body>
+</topic>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <title>Map B keydefs as delivered for deliverable "HTML"</title>
+  <keydef
+    keys="map-b.topic-b-root"
+    format="html"
+    scope="external"
+    href="./map-b.pdf">
+    <topicmeta>
+      <navtitle>Map B</navtitle>
+    </topicmeta>
+  </keydef>
+  <keydef
+    keys="map-b.topic-b-01"
+    format="html"
+    scope="external"
+    href="./map-b.pdf">
+    <topicmeta>
+      <navtitle>Topic B-01</navtitle>
+    </topicmeta>
+  </keydef>
+  <keydef
+    keys="map-b.topic-b-02"
+    format="html"
+    scope="external"
+    href="./map-b.pdf">
+    <topicmeta>
+      <navtitle>Topic B-02</navtitle>
+    </topicmeta>    
+  </keydef>
+</map>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deliverable-definition
+  id="pdf-01"
+  ditaarch:DITAArchVersion="1.2"
+  xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+  class="- topic/topic deliverable-definition/deliverable-definition "
+  domains="(topic deliverable-definition) (topic options-d) ">
+  <title class="- topic/title ">Map B PDF-01</title>
+  <deliverable-specs class="- topic/body deliverable-definition/deliverable-specs ">
+    <result-spec
+      class="- topic/section deliverable-definition/result-spec ">
+      <result-root-artifact class="- topic/bodydiv deliverable-definition/result-root-artifact ">
+        <result-link-text class="- topic/bodydiv deliverable-definition/result-link-text ">Map B</result-link-text>
+        <result-url class="- topic/bodydiv deliverable-definition/result-url ">map-b.pdf</result-url>
+      </result-root-artifact>
+    </result-spec>
+  </deliverable-specs>
+</deliverable-definition>

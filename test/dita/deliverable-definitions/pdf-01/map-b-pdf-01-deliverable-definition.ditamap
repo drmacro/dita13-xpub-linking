@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+  <title>Map B PDF-01 Deliverable Definition</title>
+  <topicref
+    href="common/pdf-01-deliverable-definition.xml"/>
+  <topicref
+    href="map-b-pdf-01-deliverable-definition.xml"/>
+</map>

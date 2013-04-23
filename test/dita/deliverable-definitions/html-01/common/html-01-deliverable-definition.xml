@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deliverable-definition
+  id="html-01"
+  ditaarch:DITAArchVersion="1.2"
+  xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+  class="- topic/topic deliverable-definition/deliverable-definition "
+  domains="(topic deliverable-definition) (topic options-d) "> <title>HTML
+  Generated Using D4P HTML2 Transform</title>
+  <deliverable-specs><processor-spec><processor-id>DITA Open Toolkit</processor-id><option
+  class="+ topic/dlentry options-d/option ">
+  <option-name
+    class="+ topic/dt options-d/option-name ">transtype</option-name>
+  <option-value
+    class="+ topic/dd options-d/option-value ">html2</option-value>
+  </option><option
+  class="+ topic/dlentry options-d/option ">
+  <option-name
+    class="+ topic/dt options-d/option-name ">generate.copy.outer</option-name>
+  <option-value
+    class="+ topic/dd options-d/option-value ">3</option-value>
+  </option><option
+  class="+ topic/dlentry options-d/option ">
+  <option-name
+    class="+ topic/dt options-d/option-name ">args.copycss</option-name>
+  <option-value
+    class="+ topic/dd options-d/option-value ">yes</option-value>
+  </option></processor-spec></deliverable-specs></deliverable-definition>

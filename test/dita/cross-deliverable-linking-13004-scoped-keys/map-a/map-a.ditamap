@@ -23,6 +23,7 @@
          This means that each use of topic-a's.
       -->
   <mapref href="keydefs/map-a-keydefs-local.ditamap" 
+    scope="local"
     processing-role="resource-only"/>
   <!-- Include Map B's map as a peer and assign a keyscope to it. -->
   <mapref href="../map-b/map-b.ditamap" 
